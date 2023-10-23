@@ -32,8 +32,8 @@ const showingNavigationDropdown = ref(false);
                                 <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
                                 </NavLink>
-                                <NavLink :href="route('chat.show')" :active="route().current('chat.show')">
-                                    ConvoGenius
+                                <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                                    Dashboard
                                 </NavLink>
                             </div>
                         </div>
