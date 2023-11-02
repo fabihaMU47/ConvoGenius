@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ConvoGeniusDeleteController;
 use App\Http\Controllers\ConvoGeniusStoreController;
 use App\Http\Controllers\ConvoGeniusIndexController;
 use App\Http\Controllers\ProfileController;
@@ -38,6 +39,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/chat/{id?}', ConvoGeniusIndexController::class)->name('chat.show');
     Route::post('/chat/{id?}', ConvoGeniusStoreController::class)->name('chat.store');
-});
+    Route::delete('/chat/{chat}', ConvoGeniusDeleteController::class)->name('chat.delete');
+}); 
 
 require __DIR__.'/auth.php';
